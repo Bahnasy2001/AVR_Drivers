@@ -15,7 +15,7 @@
 static void (*UART_pfTXC)(void) = NULL;
 static u8* UART_pu8StringToSend = NULL;
 static u8 UART_u8CurrentIndex = 0;
-static u8 volatile UART_u8BusyFlagTx = 0;
+static volatile u8 UART_u8BusyFlagTx = 0;
 
 static u8* UART_pu8ReceivedString = NULL;
 static void (*UART_pfRXC)(void) = NULL;
@@ -186,6 +186,52 @@ u8   UART_u8SendStringSynch(u8 * Copy_pu8String)
 	return Local_u8ErrorState;
 }
 
+u8 UART_u8SendStringSynchWithLength(u8 *Copy_pu8Data, u16 Copy_u16Length) {
+    u8 Local_u8ErrorState = STD_TYPES_OK;
+    u32 Local_u32TimeoutCounter = 0;
+    
+    // Check for NULL pointer
+    if (Copy_pu8Data != NULL) {
+        for (u16 i = 0; i < Copy_u16Length; i++) {
+            Local_u32TimeoutCounter = 0;
+            
+            // Wait until the data register is empty or timeout occurs
+            while (((GET_BIT(UART_u8_UCSRA_REG, UCSRA_UDRE)) == 0) && (Local_u32TimeoutCounter < UART_u32_TIME_OUT_MAX_VALUE)) {
+                Local_u32TimeoutCounter++;
+            }
+            
+            // Check if timeout occurred
+            if (Local_u32TimeoutCounter >= UART_u32_TIME_OUT_MAX_VALUE) {
+                Local_u8ErrorState = STD_TYPES_NOK;
+                break;
+            }
+            
+            // Load the data register with the next byte
+            UART_u8_UDR_REG = Copy_pu8Data[i];
+            
+            // Wait for the transmission to complete or timeout occurs
+            Local_u32TimeoutCounter = 0;
+            while ((GET_BIT(UART_u8_UCSRA_REG, UCSRA_TXC) == 0) && (Local_u32TimeoutCounter < UART_u32_TIME_OUT_MAX_VALUE)) {
+                Local_u32TimeoutCounter++;
+            }
+            
+            // Check if timeout occurred
+            if (Local_u32TimeoutCounter >= UART_u32_TIME_OUT_MAX_VALUE) {
+                Local_u8ErrorState = STD_TYPES_NOK;
+                break;
+            }
+            
+            // Clear the transmit complete flag
+            SET_BIT(UART_u8_UCSRA_REG, UCSRA_TXC);
+        }
+    } else {
+        Local_u8ErrorState = STD_TYPES_NOK;
+    }
+    
+    return Local_u8ErrorState;
+}
+
+
 u8   UART_u8ReceiveStringSynch(u8 * Copy_puReceivedString, u8 Copy_u8MessageSize)
 {
 	u8 Local_u8ErrorState = STD_TYPES_OK;
@@ -315,6 +361,9 @@ void __vector_13(void)
         {
             // Disable UART RX Complete Interrupt
             CLR_BIT(UART_u8_UCSRB_REG, UCSRB_RXCIE);
+
+            // Null-terminate the received string
+            UART_pu8ReceivedString[UART_u8ReceiveCurrentIndex] = '\0';
 
             // Call the callback function
             if (UART_pfRXC != NULL)

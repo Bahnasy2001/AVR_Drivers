@@ -15,6 +15,8 @@ u8   UART_u8ReceiveByte(u8 * Copy_pu8RecByte);
 
 u8   UART_u8SendStringSynch(u8 * Copy_pu8String);
 
+u8 UART_u8SendStringSynchWithLength(u8 *Copy_pu8Data, u16 Copy_u16Length);
+
 u8   UART_u8ReceiveStringSynch(u8 * Copy_puReceivedString, u8 Copy_u8MessageSize);
 
 u8   UART_u8SendStringAsynch(u8* Copy_pu8String, void(*Copy_pf)(void));
