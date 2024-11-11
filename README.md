@@ -50,11 +50,11 @@ Each layer serves a different purpose in the development hierarchy:
 
 ## 🔗 Layer Documentation 🔗
 
-- [MCAL Layer](./1-MCAL/README.md)
-- [HAL Layer](./2-HAL/README.md)
-- [Service Layer](./3-Service/README.md)
-- [App Layer](./4-App/README.md)
-- [Libraries](./5-LIB/README.md)
+- [MCAL Layer](./0-CTOS/1-MCAL/README.md)
+- [HAL Layer](./0-CTOS/2-HAL/README.md)
+- [Service Layer](./0-CTOS/3-Service/README.md)
+- [App Layer](./0-CTOS/4-App/README.md)
+- [Libraries](./0-CTOS/5-LIB/README.md)
 
 ---
 

@@ -32,7 +32,7 @@ Each driver is documented with setup, usage, and configuration instructions.
 
 ## 🔗 Additional Documentation 🔗
 
-- [Primary README](../README.md)
+- [Primary README](../../README.md)
 - [HAL Layer](../2-HAL/README.md)
 
 ---
