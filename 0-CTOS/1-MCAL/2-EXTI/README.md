@@ -6,11 +6,11 @@
 The **External Interrupt (EXTI) Driver** enables control and configuration of external interrupts on an AVR microcontroller. This driver allows you to set up interrupts with specific edge triggers and manage interrupt handlers. Developed in **C**, this EXTI Driver provides an easy interface for enabling, disabling, and configuring interrupts.
 
 ## 🗂 Table of Contents 🗂
-- [Features 🌟](#features)
-- [Installation 🔧](#installation)
-- [Configuration ⚙️](#configuration)
-- [API Reference 📖](#api-reference)
-- [Usage Example 💻](#usage-example)
+- [Features 🌟](#-features-)
+- [Installation 🔧](#-installation-)
+- [Configuration ⚙️](#-configuration-)
+- [API Reference 📖](#-api-reference-)
+- [Usage Example 💻](#-usage-example-)
 
 ---
 

@@ -6,11 +6,11 @@
 The **TIMERS Driver** enables control and configuration of timers in an AVR microcontroller. This driver provides an easy-to-use interface to set up and manage timers for various timing-related tasks such as delays, PWM generation, and time counting. Developed in **C**, the TIMERS Driver includes functions for configuring timer modes, prescalers, and overflow interrupts.
 
 ## 🗂 Table of Contents 🗂
-- [Features 🌟](#features)
-- [Installation 🔧](#installation)
-- [Configuration ⚙️](#configuration)
-- [API Reference 📖](#api-reference)
-- [Usage Example 💻](#usage-example)
+- [Features 🌟](#-features-)
+- [Installation 🔧](#-installation-)
+- [Configuration ⚙️](#-configuration-)
+- [API Reference 📖](#-api-reference-)
+- [Usage Example 💻](#-usage-example-)
 
 ---
 

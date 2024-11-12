@@ -6,11 +6,11 @@
 The **ADC (Analog-to-Digital Converter) Driver** allows easy integration of ADC functionality into an AVR-based microcontroller project. This driver enables analog signal conversion into a digital value, providing control over voltage reference, adjustment, prescaler, and auto-trigger modes. Developed in **C**, the driver supports both synchronous and asynchronous ADC readings with the ability to set callback functions for notifications.
 
 ## 🗂 Table of Contents 🗂
-- [Features 🌟](#features)
-- [Installation 🔧](#installation)
-- [Configuration ⚙️](#configuration)
-- [API Reference 📖](#api-reference)
-- [Usage Example 💻](#usage-example)
+- [Features 🌟](#-features-)
+- [Installation 🔧](#-installation-)
+- [Configuration ⚙️](#-configuration-)
+- [API Reference 📖](#-api-reference-)
+- [Usage Example 💻](#-usage-example-)
 
 ---
 

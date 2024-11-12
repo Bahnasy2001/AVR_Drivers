@@ -6,10 +6,10 @@
 The **Global Interrupt (GI) Driver** allows for enabling and disabling global interrupts on an AVR microcontroller. This driver provides a simple interface to manage global interrupt settings, crucial for handling interrupt-driven applications efficiently. Developed in **C**, the GI Driver abstracts direct hardware access, making it easier to control global interrupt states in embedded projects.
 
 ## 🗂 Table of Contents 🗂
-- [Features 🌟](#features)
-- [Installation 🔧](#installation)
-- [API Reference 📖](#api-reference)
-- [Usage Example 💻](#usage-example)
+- [Features 🌟](#-features-)
+- [Installation 🔧](#-installation-)
+- [API Reference 📖](#-api-reference-)
+- [Usage Example 💻](#-usage-example-)
 
 ---
 

@@ -8,11 +8,11 @@
 This **Digital Input/Output (DIO) Driver** provides a configurable interface for controlling the input and output of pins on an AVR microcontroller. The driver abstracts direct hardware access, allowing for easier and more intuitive control of port and pin configurations. Developed in **C**, this DIO Driver can be integrated into embedded projects to manage pins across various ports and set pin values, directions, and states.
 
 ## 🗂 Table of Contents 🗂
-- [Features 🌟](#features)
-- [Installation 🔧](#installation)
-- [Configuration ⚙️](#configuration)
-- [API Reference 📖 ](#api-reference )
-- [Usage Example 💻 ](#usage-example)
+- [Features 🌟](#-features-)
+- [Installation 🔧](#-installation-)
+- [Configuration ⚙️](#-configuration-)
+- [API Reference 📖 ](#-api-reference-)
+- [Usage Example 💻 ](#-usage-example-)
 
 ---
 
