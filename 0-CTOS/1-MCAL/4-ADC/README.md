@@ -50,24 +50,24 @@ Adjust settings in **ADC_config.h** for project-specific configurations. This in
 
 Here’s an overview of the key functions in **ADC_interface.h**:
 
-- **void ADC_voidInit(void)**  
+- `void ADC_voidInit(void)` 
   **Description**: Initializes the ADC with the configuration defined in the `ADC_config.h` file. It configures the reference voltage, adjustment, prescaler, and auto-trigger settings.
   
-- **u8 ADC_u8GetDigitalValueSynchNonBlocking(u8 Copy_u8ChannelNb, u16 \*Copy_pu16DigitalValue)**  
+- `u8 ADC_u8GetDigitalValueSynchNonBlocking(u8 Copy_u8ChannelNb, u16 *Copy_pu16DigitalValue)`  
   **Description**: Synchronously gets the digital value of an ADC channel. It waits for the conversion to complete before returning the result.
   - **Parameters**:
     - Copy_u8ChannelNb: The ADC channel number (0 to 31).
     - Copy_pu16DigitalValue: Pointer to store the resulting digital value.
   - **Returns**: `STD_TYPES_OK` if successful, or `STD_TYPES_NOK` if an error occurs.
 
-- **u8 ADC_u8GetDigitalValueAsynch(u8 Copy_u8ChannelNb, void (\*Copy_pfNotification) (u16))**  
+- `u8 ADC_u8GetDigitalValueAsynch(u8 Copy_u8ChannelNb, void (*Copy_pfNotification) (u16))`  
   **Description**: Asynchronously gets the digital value of an ADC channel. A callback function is called once the conversion is complete.
   - **Parameters**:
     - Copy_u8ChannelNb: The ADC channel number (0 to 31).
     - Copy_pfNotification: Pointer to the callback function to be called when conversion is complete.
   - **Returns**: `STD_TYPES_OK` if successful, or `STD_TYPES_NOK` if an error occurs.
 
-- **u8 ADC_u8GetADCRegValue (u16 * Copy_pu16ADCValue)**  
+- `u8 ADC_u8GetADCRegValue (u16 * Copy_pu16ADCValue)`  
   **Description**: Retrieves the current ADC register value directly.
   - **Parameters**:
     - Copy_pu16ADCValue: Pointer to store the ADC register value.
