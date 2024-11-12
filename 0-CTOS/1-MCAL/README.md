@@ -10,18 +10,18 @@ The **MCAL (Microcontroller Abstraction Layer)** includes drivers that directly 
 |----------------|---------------------------------------------|
 | [DIO](./1-DIO/README.md)     | Digital Input/Output Control     |
 | [EXTI](./2-EXTI/README.md)           | External Interrupts                         |
-| GI             | General Interrupts                          |
-| ADC            | Analog-to-Digital Converter                 |
-| TIMERS         | Timer Management                            |
-| WDT            | Watchdog Timer Control                      |
-| UART           | Serial Communication                        |
-| SPI            | Serial Peripheral Interface                |
-| TWI            | Two-Wire Interface Communication           |
-| EEPROM         | Electrically Erasable Programmable ROM     |
+| [GI](./3-GI/README.md)             | General Interrupts                          |
+| [ADC](./4-ADC/README.md)            | Analog-to-Digital Converter                 |
+| [TIMERS](./5-TIMERS/README.md)         | Timer Management                            |
+| [WDT](./6-WDT/README.md)            | Watchdog Timer Control                      |
+| [UART](./7-UART/README.md)           | Serial Communication                        |
+| [SPI](./8-SPI/README.md)            | Serial Peripheral Interface                |
+| [TWI](./9-TWI/README.md)            | Two-Wire Interface Communication           |
+| [EEPROM](./10-EEPROM/README.md)         | Electrically Erasable Programmable ROM     |
 
 Each driver is documented with setup, usage, and configuration instructions.
 
-## 🛠️ Getting Started with MCAL 
+## 🛠️ Getting Started with MCAL 🛠️
 
 1. **Clone the repository** and navigate to the MCAL directory.
    ```bash
