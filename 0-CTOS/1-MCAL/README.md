@@ -41,4 +41,3 @@ Each driver is documented with setup, usage, and configuration instructions.
 
 **Hassan Ahmed Fathy El Bahnasy**
 [LinkedIn](https://www.linkedin.com/in/hassanbahnasy/)
-
